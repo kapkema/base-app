@@ -13,6 +13,11 @@ buildscript {
     }
 }
 
+plugins {
+    id "io.spring.dependency-management" version "0.5.4.RELEASE"
+    id 'com.craigburke.bower-installer' version '2.5.1'
+}
+
 version "0.1"
 group "base.app"
 
