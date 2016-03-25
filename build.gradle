@@ -71,6 +71,23 @@ task wrapper(type: Wrapper) {
     gradleVersion = gradleWrapperVersion
 }
 
+bower {
+
+    'bootstrap'('3.3.x') {
+        source 'dist/css/bootstrap.css' >> 'css/'
+        source 'dist/css/bootstrap-theme.css' >> 'css/'
+        source 'dist/fonts/**' >> 'fonts/'
+        source 'dist/js/bootstrap.js'
+        excludes 'jquery'
+    }
+
+    'angular'('1.3.x') {
+        source 'angular.js'
+        source 'angular-csp.css'
+    }
+
+}
+
 assets {
     minifyJs = true
     minifyCss = true
