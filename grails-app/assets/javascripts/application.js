@@ -12,3 +12,5 @@
 //= require_tree app
 //= require_self
 
+// Create the angular application called 'app'
+angular.module('app', []);
