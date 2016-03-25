@@ -6,16 +6,9 @@
 // to create separate JavaScript files as needed.
 //
 //= require jquery-2.2.0.min
-//= require bootstrap
+//= require ../bower/bootstrap/bootstrap.js
+//= require ../bower/angular/angular.js
 //= require_tree .
+//= require_tree app
 //= require_self
 
-if (typeof jQuery !== 'undefined') {
-    (function($) {
-        $('#spinner').ajaxStart(function() {
-            $(this).fadeIn();
-        }).ajaxStop(function() {
-            $(this).fadeOut();
-        });
-    })(jQuery);
-}
