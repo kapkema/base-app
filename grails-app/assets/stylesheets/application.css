@@ -22,3 +22,7 @@
     -webkit-background-size: cover;
     -o-background-size: cover;
 }
+
+#add-user-form {
+    width: 30%;
+}

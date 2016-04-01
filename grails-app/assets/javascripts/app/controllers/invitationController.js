@@ -4,11 +4,20 @@ angular.module('partyPeople').controller('invitationController', function ($scop
     var getInvitees = function () {
         //this would come from your rest api
         return [
-            {name: {first: "Homer", last: "Simpson"}},
-            {name: {first: "Ned", last: "Flanders"}},
-            {name: {first: "Milhouse", last: "Van Houten"}}
+            {name: {first: "Homer", last: "Simpson"}, email: "homer@aol.com"},
+            {name: {first: "Ned", last: "Flanders", email: "ned@aol.com"}},
+            {name: {first: "Milhouse", last: "Van Houten", email: "milhouse@gmail.com"}}
         ];
     };
 
     $scope.invitees = getInvitees();
+
+    $scope.invite = function (guest) {
+        $scope.invitees.push(guest);
+        $scope.reset();
+    };
+
+    $scope.reset = function () {
+        delete $scope.user;
+    }
 });
