@@ -9,7 +9,27 @@
 </head>
 
 <body ng-app="partyPeople">
-<h1>Welcome to the sample Grails 3 Angular App</h1>
+<div id="container">
+    <div id="header">
+        <h1>Party People!</h1>
+    </div>
+
+    <div id="list">
+        <h3>Who's invited?!</h3>
+        <ul>
+            <li>Person 1</li>
+            <li>Person 2</li>
+        </ul>
+    </div>
+
+    <div id="form">
+        <h3>Invite someone else?!</h3>
+
+        <div id="first-name">First Name</div>
+
+        <div id="last-name">Last Name</div>
+    </div>
+</div>
 </body>
 
 </html>
