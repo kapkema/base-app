@@ -22,7 +22,14 @@ angular.module('partyPeople').controller('invitationController', function ($scop
         $scope.userForm.$setPristine();
     };
 
-    $scope.hasError = function(formValue) {
+    $scope.hasError = function (formValue) {
         return formValue.$invalid && !formValue.$pristine
     };
+
+    $scope.debugCount = 0;
+    $scope.trackDebug = function () {
+        if($scope.debug) {
+            $scope.debugCount++
+        }
+    }
 });

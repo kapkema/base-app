@@ -70,7 +70,7 @@
 
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" ng-model="debug"> Debug
+                            <input type="checkbox" ng-model="debug" ng-change="trackDebug()"> Debug
                         </label>
                     </div>
                 </form>
@@ -78,7 +78,9 @@
 
 
                 <br/>
+                <pre id="debugTracker">Debug has been activated {{debugCount}} times</pre>
                 <pre id="debug" ng-show="debug">user = {{add-user-form.emailAddressInput.$touched | json}}</pre>
+
             </div>
             <div class="col-md-6">
                 <select ng-model="selectedGuest" ng-options="invitee.name.first for invitee in invitees">
