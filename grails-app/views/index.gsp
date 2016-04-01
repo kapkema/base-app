@@ -9,7 +9,13 @@
 </head>
 
 <body ng-app="partyPeople">
-<h1>Welcome to the sample Grails 3 Angular App</h1>
+<div ng-controller="invitationController">
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">{{title}}</h1>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>

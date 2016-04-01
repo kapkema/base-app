@@ -8,7 +8,6 @@
 //= require jquery-2.2.0.min
 //= require ../bower/bootstrap/bootstrap.js
 //= require ../bower/angular/angular.js
-//= require_tree .
 //= require_self
 //= require_tree app
 

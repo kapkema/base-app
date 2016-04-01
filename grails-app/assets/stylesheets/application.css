@@ -14,3 +14,11 @@
 *= require_tree ../bower/bootstrap/css/bootstrap-theme.css
 *= encoding UTF-8
 */
+
+.jumbotron {
+    background: #000 url("../images/jumbotron.jpg") no-repeat center center;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+}
