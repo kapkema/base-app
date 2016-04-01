@@ -5,8 +5,8 @@ angular.module('partyPeople').controller('invitationController', function ($scop
         //this would come from your rest api
         return [
             {name: {first: "Homer", last: "Simpson"}, email: "homer@aol.com"},
-            {name: {first: "Ned", last: "Flanders", email: "ned@aol.com"}},
-            {name: {first: "Milhouse", last: "Van Houten", email: "milhouse@gmail.com"}}
+            {name: {first: "Ned", last: "Flanders"}, email: "ned@aol.com"},
+            {name: {first: "Milhouse", last: "Van Houten"}, email: "milhouse@gmail.com"}
         ];
     };
 
