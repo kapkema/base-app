@@ -16,10 +16,20 @@
 
     <div id="list">
         <h3>Who's invited?!</h3>
-        <ul>
-            <li>Person 1</li>
-            <li>Person 2</li>
-        </ul>
+        <table class="table table-condensed table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>First</th>
+                <th>Last</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="invitee in invitees">
+                <td>{{invitee.name.first}}</td>
+                <td>{{invitee.name.last}}</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 
     <div id="form">
