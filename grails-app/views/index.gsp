@@ -58,7 +58,7 @@
                        type="email" ng-model="user.email" required/>
             </div>
             <button type="submit" ng-disabled="!userForm.$valid" class="btn btn-primary"
-                    ng-click="invite(user)">Submit</button>
+                    ng-click="invite(user)">Invite</button>
             <button type="submit" ng-disabled="userForm.$pristine" class="btn btn-default" ng-click="reset()">Reset</button>
 
             <div class="checkbox">
