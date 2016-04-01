@@ -18,6 +18,11 @@ angular.module('partyPeople').controller('invitationController', function ($scop
     };
 
     $scope.reset = function () {
-        delete $scope.user;
-    }
+        $scope.user = {};
+        $scope.userForm.$setPristine();
+    };
+
+    $scope.hasError = function(formValue) {
+        return formValue.$invalid && !formValue.$pristine
+    };
 });

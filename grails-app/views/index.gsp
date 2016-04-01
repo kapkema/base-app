@@ -27,9 +27,9 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="invitee in invitees">
-                    <td>{{invitee.name.first}}</td>
-                    <td>{{invitee.name.last}}</td>
+                <tr ng-repeat="invitee in invitees track by $index" ng-id="invitee-{{$index}}">
+                    <td ng-id="invitee-first-name-{{$index}}">{{invitee.name.first}}</td>
+                    <td ng-id="invitee-last-name-{{$index}}">{{invitee.name.last}}</td>
                 </tr>
                 </tbody>
             </table>
@@ -39,26 +39,28 @@
     <div class="container">
         <h3>Invite someone else?!</h3>
 
-        <form id="add-user-form">
-            <div class="form-group">
+        <form id="add-user-form" name="userForm" novalidate>
+            <div class="form-group" ng-class="{ 'has-error' : hasError(userForm.first) }">
                 <label for="firstNameInput">First Name</label>
-                <input id="firstNameInput" class="form-control" placeholder="First Name" type="text"
+                <input id="firstNameInput" name="first" class="form-control" placeholder="First Name" type="text"
                        ng-model="user.name.first" required/>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" ng-class="{ 'has-error' : hasError(userForm.last) }">
                 <label for="lastNameInput">Last Name</label>
-                <input id="lastNameInput" class="form-control" placeholder="Last Name" type="text"
+                <input id="lastNameInput" name="last" class="form-control" placeholder="Last Name" type="text"
                        ng-model="user.name.last" required/>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" ng-class="{ 'has-error' : hasError(userForm.email) }">
                 <label for="emailAddressInput">Email</label>
-                <input id="emailAddressInput" class="form-control" placeholder="E-mail address" type="email"
-                       ng-model="user.email" required/>
+                <input id="emailAddressInput" name="email" class="form-control" placeholder="E-mail address"
+                       type="email" ng-model="user.email" required/>
             </div>
-            <button type="submit" class="btn btn-primary" ng-click="invite(user)">Submit</button>
-            <button type="submit" class="btn btn-default" ng-click="reset()">Reset</button>
+            <button type="submit" ng-disabled="!userForm.$valid" class="btn btn-primary"
+                    ng-click="invite(user)">Submit</button>
+            <button type="submit" ng-disabled="userForm.$pristine" class="btn btn-default" ng-click="reset()">Reset</button>
+
             <div class="checkbox">
                 <label>
                     <input type="checkbox" ng-model="debug"> Debug
@@ -67,7 +69,7 @@
         </form>
 
         <br/>
-        <pre id="debug" ng-show="debug">user = {{user | json}}</pre>
+        <pre id="debug" ng-show="debug">user = {{add-user-form.emailAddressInput.$touched | json}}</pre>
     </div>
 
 </div>
