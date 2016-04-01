@@ -9,13 +9,4 @@
 //= require ../bower/bootstrap/bootstrap.js
 //= require ../bower/angular/angular.js
 //= require_tree .
-//= require_tree app
 //= require_self
-
-// Create the angular application called 'app'
-angular.module('app', []);
-
-// Define a controller called 'welcomeController'
-angular.module('app').controller('welcomeController', function($scope) {
-    $scope.greeting = 'Hello Stranger'
-});
