@@ -8,8 +8,8 @@
     <asset:stylesheet src="application.css"/>
 </head>
 
-<body>
+<body ng-app="partyPeople">
 <h1>Welcome to the sample Grails 3 Angular App</h1>
-
 </body>
+
 </html>

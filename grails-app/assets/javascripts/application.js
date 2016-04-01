@@ -10,3 +10,6 @@
 //= require ../bower/angular/angular.js
 //= require_tree .
 //= require_self
+//= require_tree app
+
+angular.module('partyPeople', []);
